@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Feliz Aniversário, Mateus 💖</title>
+    <style>
+        body {
+            background-color: #001f3f; /* azul marinho */
+            color: #e0e6f2; /* azul clarinho */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #d1d9f0;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #e0e6f2;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0%, 100% {opacity: 0.2;}
+            50% {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <h1>Feliz Aniversário, Mateus 💖</h1>
+        <p>
+            "Não sou muito bom com textinhos, né... mas, <em>come here</em>, Mateus.<br><br>
+            Eu sei que a gente não se conhece há muito tempo, mas eu quero te dizer que você é muito importante pra mim.<br><br>
+            Você sabe que eu faria de tudo pra ter você, né?<br><br>
+            Eu te amo, bebê. E por te amar, eu fiz aquela escolha difícil de a gente se afastar...<br><br>
+            Mas saiba que você sempre será muito importante pra mim. Você é uma pessoa incrível.<br><br>
+            Eu queria muito te ver pessoalmente, te abraçar e nunca mais te soltar.<br><br>
+            Enfim, era isso que eu queria dizer...<br><br>
+            Feliz aniversário, gatinho. Te amo."
+        </p>
+    </div>
+    <audio autoplay loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/28/audio_2b0b7b6806.mp3?filename=ambient-114024.mp3" type="audio/mpeg" />
+        Seu navegador não suporta áudio.
+    </audio>
+    <script>
+        const stars = document.querySelector('.stars');
+        for(let i = 0; i < 100; i++){
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            stars.appendChild(star);
+        }
+    </script>
+</body>
+</html>
